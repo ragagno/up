@@ -1,4 +1,4 @@
-package.path = "../types.lua;" .. package.path
+package.path = "../../types.lua;" .. package.path
 
 local name = "producer"
 
