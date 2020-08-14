@@ -5,7 +5,7 @@ local name = "producer"
 local function generate_producer_named(type, name)
     local name = name:gsub("^%l", string.upper)
     
-    io.write(string.format("\n// The type `%s` represents a function that returns a `%s`.\n", name, type))
+    io.write(string.format("\n// %s represents a function that returns a %s.\n", name, type))
     io.write(string.format("type %s func() %s\n", name, type))
 end
 
@@ -16,7 +16,7 @@ end
 local function generate_producers_named(type, name)
     local name = name:gsub("^%l", string.upper) .. "s"
     
-    io.write(string.format("\n// The type `%s` represents a function that returns a `[]%s`.\n", name, type))
+    io.write(string.format("\n// %s represents a function that returns a []%s.\n", name, type))
     io.write(string.format("type %s func() []%s\n", name, type))
 end
 
